@@ -1,5 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>home</h1>
+
+    {% if listings %}
+        {% for listing in listings %}
+            <p>WINDOWS 10</p>
+        {% endfor %}
+
+
+    {% else %}
+        <div class="col-md-12">
+            <p>No Listings Available</p>
+        </div>
+
+    {% endif %}
 {% endblock %}
